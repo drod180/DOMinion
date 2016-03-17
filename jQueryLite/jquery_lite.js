@@ -35,12 +35,13 @@
 
   };
 
-  $l.prototype.extend = function () {
+  root.$l.extend = function () {
     var args = [].slice.call(arguments);
     var returnObject = {};
     args.forEach(function (obj) {
-      obj.keys.forEach(function(key){
-        returnObject[key] = obj.key;
+      // debugger
+      Object.keys(obj).forEach(function(key){
+        returnObject[key] = obj[key];
       });
     });
     return returnObject;
@@ -100,9 +101,13 @@
   };
 
   DOMNodeCollection.prototype.addClass = function (value) {
-    if (this.attr("class") === null) {
-      this.attr("class", value);
-    }
+    this.forEach(function (el) {
+      if (el.getAttribute("class") === null) {
+        el.setAttribute("class", value);
+      } else {
+        el.className += (" " + value);
+      }
+    });
   };
 
   DOMNodeCollection.prototype.removeClass = function (value) {
