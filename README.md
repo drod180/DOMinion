@@ -40,7 +40,9 @@ var _registerCallback = function (callback) {
 };
 ```
 
+
 ###Public API
+```
 * $d(selector) - Create new DOMNodeCollection or add callback to be called on DOM ready.
 	* $d.extend(target[,object]...[,object]) - Merge one ore more objects into target object.
 	* $d.ajax([options]) - Asynchronous XMLHttpRequest.
@@ -59,3 +61,4 @@ var _registerCallback = function (callback) {
 	* parent() - Get parent of DOM elements, returns new DOMNodeCollection.
 	* remove() - Remove DOM elements from DOM.
 	* removeClass(className) - Remove class to DOM elements
+```
