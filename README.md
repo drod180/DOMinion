@@ -22,7 +22,7 @@ root.$d = function (selector) {
 			}
 			break;
 		case "function":
-		  _registerCallback(selector);
+		_registerCallback(selector);
       break;
 	}
 
@@ -35,7 +35,7 @@ var _registerCallback = function (callback) {
   if(_docReady){
     callback();
   } else {
-		_docReadyCallbacks.push(callback);
+	_docReadyCallbacks.push(callback);
   }
 };
 ```
