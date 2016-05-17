@@ -23,7 +23,7 @@ root.$d = function (selector) {
 			break;
 		case "function":
 		_registerCallback(selector);
-      break;
+        break;
 	}
 
 	return returnVal;
