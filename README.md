@@ -10,22 +10,20 @@ Proof of concept: [snake](http://www.drodriguez.io/snake/) | [github](https://gi
 ```
 //Selector can be string, HTMLElement object or function.
 root.$d = function (selector) {
-	var returnVal;
-
-	switch (typeof(selector)) {
-		case "string":
-			returnVal = _getSelectorsFromDom(selector);
-			break;
-		case "object":
-			if (selector instanceof HTMLElement) {
-				returnVal = new DOMNodeCollection(selectors);
-			}
-			break;
-		case "function":
-		_registerCallback(selector);
-        break;
-	}
-
+ var returnVal;
+ switch (typeof(selector)) {
+    case "string":
+      returnVal = _getSelectorsFromDom(selector);
+      break;
+    case "object":
+      if (selector instanceof HTMLElement) {
+        returnVal = new DOMNodeCollection(selectors);
+      }
+      break;
+    case "function":
+      _registerCallback(selector);
+      break;
+  }
 	return returnVal;
 };
 
