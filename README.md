@@ -5,10 +5,9 @@ DOMinion is a lightweight DOM manipulation library that provides easy to use met
 Proof of concept: [snake](http://www.drodriguez.io/snake/) | [github](https://github.com/drod180/snake)
 
 ###Technical Details:
-* DOMinion is a lightweight library that uses instance variable htmlElements which is coerced to behave like an array. htmlElements are kept in an object called DOMNodeCollection which has multiple public API which can be used to manipulate the DOM.
-
 ```
 //Selector can be string, HTMLElement object or function.
+//Returns either DOMNodeCollection or registers callback.
 root.$d = function (selector) {
  var returnVal;
  switch (typeof(selector)) {
