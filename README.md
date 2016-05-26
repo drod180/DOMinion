@@ -39,23 +39,39 @@ var _registerCallback = function (callback) {
 
 
 ###Public API
-```
-$d(selector) - Create new DOMNodeCollection or add callback to be called on DOM ready.
-	$d.extend(target[,object]...[,object]) - Merge one ore more objects into target object.
-	$d.ajax([options]) - Asynchronous XMLHttpRequest.
-DOMNodeCollection.prototype
-	addClass(className) - Add class to DOM elements.
-	append(children) - Add children elements to DOM elements.
-	attr(attrName, value) - Set attribute to value for DOM elements.
-	children() - Get children of DOM elements, returns new DOMNodeCollection.
-	each() - Iterate through each DOM element.
-	empty() - Set DOM elements to empty strings.
-	equal(index) - Find DOM element by index in DOMNodeCollection, returns new DOMNodeCollection.
-	filter(selector) - Find DOM elements that match on string selector, returns new DOMNodeCollection.
-	find(selector) - Find DOM elements by selector, returns new DOMNodeCollection.
-	on(eventName, callback) - Add event listener to DOM elements for particular event.
-	off(eventName, callback) - Remove event listener from DOM elements for particular event.
-	parent() - Get parent of DOM elements, returns new DOMNodeCollection.
-	remove() - Remove DOM elements from DOM.
-	removeClass(className) - Remove class to DOM elements
-```
+
+`$d.extend(target[,object]...[,object])` - Merge one or more objects into target object.
+
+`$d.ajax([options])` - Asynchronous XMLHttpRequest.
+###DOMNodeCollection
+####Constructor
+`$d(selector)` - Create new `DOMNodeCollection` or add callback to be called on DOM ready.
+#####DOM Manipulation
+`addClass(className)` - Add class to DOM elements.
+
+`append(children)` - Add `children` elements to DOM elements.
+
+`attr(attrName, value)` - Set attribute to `value` for DOM elements.
+
+`empty()` - Set DOM elements to empty strings.
+
+`on(eventName, callback)` - Add `callback` to DOM elements for particular `eventName`.
+
+`off(eventName, callback)` - Remove `callback`  from DOM elements for particular `eventName`.
+
+`remove()` - Remove DOM elements from DOM.
+
+`removeClass(className)` - Remove the class `className` from DOM elements
+
+#####DOM Retrieval
+`children()` - Get children of DOM elements, returns new `DOMNodeCollection`.
+
+`each()` - Iterate through each DOM element.
+
+`equal(index)` - Find DOM element by `index` in `DOMNodeCollection`, returns new `DOMNodeCollection`.
+
+`filter(selector)` - Find DOM elements that match on string `selector`, returns new `DOMNodeCollection`.
+
+`find(selector)` - Find DOM elements by `selector`, returns new `DOMNodeCollection`.
+
+`parent()` - Get parent of DOM elements, returns new `DOMNodeCollection`.
