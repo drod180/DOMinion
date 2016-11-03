@@ -5,7 +5,7 @@ DOMinion is a lightweight DOM manipulation library that provides easy to use met
 Proof of concept: [snake](http://www.drodriguez.io/snake/) | [github](https://github.com/drod180/snake)
 
 ###Technical Details:
-```
+```javascript
 //Selector can be string, HTMLElement object or function.
 //Returns either DOMNodeCollection or registers callback.
 root.$d = function (selector) {
